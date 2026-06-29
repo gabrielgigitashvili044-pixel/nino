@@ -215,7 +215,84 @@
     .convo-msg { font-size: 13.5px; max-width: 92%; }
   }
 
-  /* ===== LOGO STRIP ===== */
+  /* ===== PERFECT DAY TIMELINE ===== */
+  .day-section { background: #FFF8EF; }
+  .day-timeline {
+    max-width: 760px;
+    margin: 50px auto 0;
+    position: relative;
+  }
+  .day-timeline::before {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--line);
+  }
+  .day-scene {
+    position: relative;
+    padding-left: 76px;
+    margin-bottom: 40px;
+  }
+  .day-scene:last-child { margin-bottom: 0; }
+  .day-time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1.1;
+    z-index: 1;
+  }
+  .day-scene.highlight .day-time { background: var(--coral); color: var(--ink); }
+  .day-card {
+    background: var(--cream-card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+  }
+  .day-card .tag {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--coral-deep);
+    background: #FDEDE3;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .day-card h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .day-card p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 10px; }
+  .day-card p:last-child { margin-bottom: 0; }
+  .day-card .ai-line {
+    background: #FFF3EE;
+    border-left: 3px solid var(--coral);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink);
+  }
+  @media (max-width: 600px) {
+    .day-timeline::before { left: 23px; }
+    .day-scene { padding-left: 60px; }
+    .day-time { width: 46px; height: 46px; font-size: 11px; }
+  }
+
+
   .logo-strip {
     padding: 60px 6vw 70px;
     max-width: 1100px;
@@ -449,170 +526,4 @@
       <div class="convo-avatar">N</div>
       <div>
         <div class="convo-name">Nino</div>
-        <div class="convo-status">● al lavoro</div>
-      </div>
-    </div>
-    <div class="convo-body">
-      <div class="convo-msg boss">Nino, come va oggi?</div>
-      <div class="convo-msg nino">Oggi hai <b>12 prenotazioni</b>. Un cliente alle 16:00 ha già saltato due volte — vuoi che gli scriva un promemoria extra?
-        <div class="convo-action">✓ Promemoria inviato</div>
-      </div>
-      <div class="convo-msg nino">Anche, <b>17 clienti</b> non si vedono da 6 settimane. Con un messaggio probabilmente ne torneranno 4 o 5.
-        <div class="convo-action">→ Vuoi che scriva io?</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="logo-strip">
-  <p>Già al lavoro in saloni come questi</p>
-  <div class="logo-strip-row">
-    <div class="biz-chip">💈 Barber King</div>
-    <div class="biz-chip">✂️ Lambert's</div>
-    <div class="biz-chip">💈 Salone Centrale</div>
-    <div class="biz-chip">✂️ Old School Barber</div>
-    <div class="biz-chip">💈 Studio Taglio</div>
-  </div>
-</section>
-
-<section class="ba-band">
-  <div class="ba-head">
-    <div class="section-eyebrow">La differenza</div>
-    <h2 class="display">Senza di noi è il caos.<br>Con noi, va da solo.</h2>
-  </div>
-  <div class="ba-grid">
-    <div class="ba-col before">
-      <h3>Senza Nino</h3>
-      <ul class="ba-list">
-        <li>📱 Rispondi tu, la sera, stanco</li>
-        <li>📅 Prenoti a memoria</li>
-        <li>😵 No-show che non recuperi mai</li>
-        <li>⭐ Recensioni senza risposta</li>
-        <li>📸 Instagram fermo da settimane</li>
-      </ul>
-    </div>
-    <div class="ba-arrow">→</div>
-    <div class="ba-col after">
-      <h3>Con Nino</h3>
-      <ul class="ba-list">
-        <li>👤 Un dipendente che risponde subito</li>
-        <li>👤 Gestisce l'agenda da solo</li>
-        <li>👤 Riempie le sedie vuote in minuti</li>
-        <li>👤 Risponde a ogni recensione</li>
-        <li>👤 Mantiene viva la pagina del salone</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="cosa-fa">
-  <div class="section-head">
-    <div class="section-eyebrow">Le sue mansioni</div>
-    <h2 class="section-title display">Tutto quello che farebbe un dipendente, lo fa lui</h2>
-  </div>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <div class="feature-icon">💬</div>
-      <h3>Risponde ai clienti</h3>
-      <p>Su WhatsApp e Instagram, anche a mezzanotte. Nino risponde subito, come faresti tu se avessi tempo.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📅</div>
-      <h3>Gestisce le prenotazioni</h3>
-      <p>Il cliente prenota scrivendo, senza chiamarti mentre hai le mani occupate. L'agenda si aggiorna da sola.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔁</div>
-      <h3>Recupera i no-show</h3>
-      <p>Se un cliente salta, Nino avvisa subito chi è in lista d'attesa. La sedia si riempie in pochi minuti.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">❤️</div>
-      <h3>Fa tornare chi è sparito</h3>
-      <p>Nota chi non viene da settimane e scrive un messaggio caldo — non spam, un vero promemoria personale.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📸</div>
-      <h3>Cura i social</h3>
-      <p>Prepara contenuti per Instagram, così la pagina del salone resta viva anche nei giorni più impegnati.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⭐</div>
-      <h3>Risponde alle recensioni</h3>
-      <p>Ogni recensione su Google ha una risposta professionale e veloce — anche quelle difficili.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section how-section">
-  <div class="section-head">
-    <div class="section-eyebrow">Come si assume</div>
-    <h2 class="section-title display">Tre passi, dieci minuti</h2>
-  </div>
-  <div class="how-grid">
-    <div class="how-step">
-      <div class="step-num">1</div>
-      <h3>Ci scrivi su WhatsApp</h3>
-      <p>Niente moduli lunghi. Ci dici il nome del salone e gli orari, basta così.</p>
-    </div>
-    <div class="how-step">
-      <div class="step-num">2</div>
-      <h3>Nino entra in servizio</h3>
-      <p>Colleghiamo Nino al tuo WhatsApp Business. Lo facciamo noi, tu non tocchi niente.</p>
-    </div>
-    <div class="how-step">
-      <div class="step-num">3</div>
-      <h3>Il salone va da solo</h3>
-      <p>Da quel momento, Nino risponde, prenota e recupera clienti senza che tu glielo chieda.</p>
-    </div>
-  </div>
-</section>
-
-<section class="quote-band">
-  <blockquote>"Prima rispondevo ai messaggi la sera, tardi, stanco. Adesso è come avere qualcuno alla reception, sempre."</blockquote>
-  <div class="who">— Un barbiere che lavora con Nino</div>
-</section>
-
-<section class="section pricing-section" id="prezzo">
-  <div class="section-head">
-    <div class="section-eyebrow">Prezzo</div>
-    <h2 class="section-title display">Un dipendente che costa meno di un dipendente</h2>
-  </div>
-  <div class="price-card">
-    <div class="price-amount">€79<span>/mese</span></div>
-    <div class="price-setup">Attivazione gratuita · Nessun contratto a lungo termine</div>
-    <ul class="price-list">
-      <li><span class="check">✓</span> Risposte automatiche 24/7</li>
-      <li><span class="check">✓</span> Prenotazioni su WhatsApp</li>
-      <li><span class="check">✓</span> Recupero no-show automatico</li>
-      <li><span class="check">✓</span> Richiamo clienti spariti</li>
-      <li><span class="check">✓</span> Post Instagram pronti</li>
-      <li><span class="check">✓</span> Risposte alle recensioni Google</li>
-    </ul>
-    <a href="#cta" class="btn-primary">Assumi Nino</a>
-  </div>
-  <div class="price-guarantee">Se in 30 giorni non recuperi almeno una sedia in più a settimana, non paghi.</div>
-
-  <div class="roadmap-strip">
-    <p class="label">Oggi lavora per i barbieri. Presto anche per:</p>
-    <div class="roadmap-row">
-      <div class="roadmap-chip active">💈 Barbieri</div>
-      <div class="roadmap-chip">🍕 Ristoranti</div>
-      <div class="roadmap-chip">🏋️ Palestre</div>
-      <div class="roadmap-chip">🦷 Dentisti</div>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta" id="cta">
-  <h2 class="section-title display">Il tuo salone merita<br>una vita più calma.</h2>
-  <p>14 giorni gratis. Lo attiviamo noi, tu rispondi solo a un messaggio di benvenuto.</p>
-  <a href="https://wa.me/?text=Ciao%2C%20voglio%20assumere%20Nino%20per%20il%20mio%20salone" class="btn-primary">Scrivici su WhatsApp</a>
-</section>
-
-<footer>
-  Nino — il tuo primo dipendente AI. Fatto per i barbieri, non per i tecnici.
-</footer>
-
-</body>
-</html>
+        <div class="convo-status">● al lavoro</d
